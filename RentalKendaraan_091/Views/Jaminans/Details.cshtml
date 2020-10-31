@@ -1,0 +1,30 @@
+﻿@model RentalKendaraan_091.Models.Jaminan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jaminan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaJaminan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaJaminan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdJaminanNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdJaminanNavigation.IdPeminjaman)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdJaminan">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
